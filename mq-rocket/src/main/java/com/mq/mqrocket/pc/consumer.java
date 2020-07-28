@@ -16,7 +16,7 @@ public class consumer {
         DefaultMQPushConsumer pushConsumer = new DefaultMQPushConsumer("test_consumer");
         pushConsumer.setNamesrvAddr("localhost:9876");
         pushConsumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
-        pushConsumer.subscribe("Topic","*");
+        pushConsumer.subscribe("TopicTest","*");
         pushConsumer.registerMessageListener((MessageListenerConcurrently) (list, consumeConcurrentlyContext) -> {
             System.out.printf(Thread.currentThread().getName()+" receive msg : "+list+"%n");
             return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
