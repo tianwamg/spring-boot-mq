@@ -19,6 +19,7 @@
     - 修改rocketmq-console application.properties文件参数
     - server.port=8080
     - rocketmq.config.namesrvAddr=localhost:9876
+    - 项目启动: mvn spring-boot:run
     - 浏览器输入 locahost:8080即可访问
 5. 连接测试（bin目录下）
     * 在cmd窗口输入消费者:
@@ -30,3 +31,8 @@
 ### 注意
 * 在实际开发过程中创建生产者很有可能会出现 no route info of Topic，估计原因是没有做第5步测试导致
 * 虽然很多blog说查看broker.log日志，但是基本没问题，要么没有第2步，要么第5步
+
+### 参考地址
+1. http://rocketmq.apache.org/docs/quick-start/
+2. https://blog.csdn.net/u013887008/article/details/104027674
+3. https://zhuanlan.zhihu.com/p/93400133
