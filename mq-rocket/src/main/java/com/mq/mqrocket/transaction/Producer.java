@@ -18,7 +18,7 @@ public class Producer {
         ExecutorService service = new ThreadPoolExecutor(2, 5, 100, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(2000), new ThreadFactory() {
             @Override
             public Thread newThread(Runnable r) {
-                Thread thread = newThread(r);
+                Thread thread = new Thread(r);
                 thread.setName("client-transaction-msg-check-thread");
                 return thread;
             }
